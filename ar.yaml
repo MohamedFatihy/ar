@@ -5,15 +5,13 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    name: ''
-    namespace: default
     server: 'https://kubernetes.default.svc'
+    namespace: default
   source:
-    path: apps/my-app
     repoURL: 'https://github.com/your-repo/my-repo.git'
+    path: apps/my-app
     targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-
